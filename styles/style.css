@@ -1,50 +1,148 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-
-/* naar een idee van Jen Simmons */
-*, *::after, *::before {
-  box-sizing:border-box;  
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'ninja_narutoregular';
+    src: url('../fonts/njnaruto-webfont.woff2') format('woff2'),
+        url('../fonts/njnaruto-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.open {
+    font-family: ninja_narutoregular;
+    color: white;
+    font-size: 1.5em;
+    position: absolute;
+    left: 30%;
+    top: 77%;
+    z-index: -2;
+}
+
+.arrow {
+    position: absolute;
+    left: 25%;
+    top: 55%;
+    z-index: -2;
+}
+
+.progress {
+    position: absolute;
+    top: 75%;
+    left: 20%;
+    opacity: 0;
+    height: 22px;
+    width: 888px;
+    object-fit: cover;
+    object-position: 0%;
+}
+
+
+
+/* Basic page styling */
 body {
-  margin:0;
+    font-family: ninja_narutoregular;
+    background-image: url("../images/Sky.png");
+    margin: 0;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
-button:not([disabled]) {
-  cursor:pointer;
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
-
-img {
-  max-width:100%;
-}
-
-
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-
-:root {
-  --color-headings:crimson
-  /* ... */
-
-}
-
-
-
-
-
-/********************/
-/* ALGEMENE STYLING */
-/********************/
 
 h1 {
-  color:var(--color-headings);
+    font-size: 36px;
 }
 
-/* ... */
+.scroll {
+    height: 45em;
+    width: auto;
+    top: 0%;
+    position: absolute;
+    left: 0%;
+}
+
+.scroll:hover {
+    cursor: pointer;
+}
+
+.content {
+    height: 45em;
+    width: 0%;
+    top: 0%;
+    position: absolute;
+    left: 3%;
+    z-index: -1;
+    object-fit: cover;
+    object-position: 0%;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    height: 13em;
+    z-index: -2;
+}
 
 
+.timeline {
+    background-color: #f2f2f2;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+/* Styling for timeline events */
+.event {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.event:hover {
+    background-color: #ddd;
+}
+
+.event-details {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.character-biographies {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.art-gallery {
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* Styling for gallery images */
+.gallery-image {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Add additional styles and customization as needed */
