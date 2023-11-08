@@ -7,16 +7,35 @@
 </head>
 
 <body>
-    <section>
-        <img class="scroll" onclick="scrollTerug()" src="images/scrollzonder.png" alt="Italian Trulli">
-        <img class="scroll" onclick="scrollUit()" src="images/scroll.png" alt="Italian Trulli">
-        <img class="content" onclick="" src="images/scrolluit.png" alt="Italian Trulli">
-        <img class="logo" onclick="schreeuw()" src="images/logo.png" alt="Italian Trulli">
-        <img class="arrow" src="images/arrow.png" alt="Italian Trulli">
-        <img class="progress" onclick="" src="images/progress1.png" alt="Italian Trulli">
-        <img class="progress" onclick="" src="images/progress2.png" alt="Italian Trulli">
-        <p class="open">Undo the seal!</p>
-    </section>
+    <div id="container">
+        <img id="scrollzonder" usemap="#workmap" src="images/scrollzonder.png" alt="Scroll without seal">
+        <img id="scrollmet"  src="images/scroll.png" alt="Scroll with seal">
+        <img id="content" onclick="" src="images/scrolluit.png" alt="Rolled out scroll">
+        <img class="logo" src="images/logo.png" alt="Naruto logo">
+        <img id="arrow" src="images/arrow.png" alt="Arrow">
+        <img class="progress" usemap="#workmap" onclick="" src="images/progress1.png" alt="Scrollbar">
+        <img class="progress" usemap="#workmap" onclick="" src="images/progress2.png" alt="Scrollbar filled">
+        <map name="workmap">
+            <area shape="rect" coords="0,0,368,976" alt="Computer" onclick="scrollTerug()" href="#scrollgone">
+            <area shape="rect" coords="200,0,170,32" alt="Phone" onclick="theBeginning()" href="#test">
+            <area shape="rect" coords="370,0,340,32" alt="Coffee" onclick="growingUp()">
+            <area shape="rect" coords="540,0,510,32" alt="Coffee" onclick="gettingBetter()">
+            <area shape="rect" coords="720,0,690,32" alt="Coffee" onclick="peak()">
+            <area shape="rect" coords="888,0,850,32" alt="Coffee" onclick="theEnd()">
+        </map>
+        <p id="open">Undo the seal!</p>
+        <section id="inhoud">
+            <h1 onclick="theBeginning()">1. The beginning</h1>
+            <h1 onclick="growingUp()">2. Growing up</h1>
+            <h1 onclick="gettingBetter()">3. Getting better</h1>
+            <h1 onclick="peak()">4. Peak</h1>
+            <h1 onclick="theEnd()">5. The end</h1>
+            <img class="hoofd" src="images/hoofd.png" alt="Naruto logo">
+        </section>
+        <section id="animatie">
+        </section>
+
+    </div>
     <script src="scripts/script.js"></script>
 </body>
 

@@ -1,64 +1,100 @@
-var scroll = document.getElementsByClassName("scroll");
+var x = document.getElementById("scrollzonder");
+var y = document.getElementById("scrollmet");
+var z = document.getElementById("content");
+var arrow = document.getElementById("arrow");
+var open = document.getElementById("open");
+var progress = document.getElementsByClassName("progress")[0];
+var progress1 = document.getElementsByClassName("progress")[1];
+var logo = document.getElementsByClassName("logo")
 var paper = new Audio('sounds/paper.wav');
 var believeit = new Audio('sounds/believeit.mp3');
+var secties = document.querySelector("#container section");
+var container = document.getElementById("container")
 
 console.log("noice");
+
+
+y.addEventListener("click", scrollUit);
+x.addEventListener("click", scrollTerug);
+
+function scrollUit() {
+    y.removeEventListener("click", scrollUit);
+    x.removeEventListener("click", scrollTerug);
+    progress.style.transition = "1s ease";
+    progress1.style.transition = "1s ease";
+    y.style.opacity = "0"
+    y.removeAttribute("onclick");
+    progress1.style.width = "2em";
+    setTimeout(() => {
+        z.style.width = "95%";
+    }, 1000);
+    setTimeout(() => {
+        z.style.width = "600%";
+    }, 3500);
+    setTimeout(() => {
+        x.id = "scrollleft";
+    }, 1000);
+    setTimeout(() => {
+        paper.play();
+    }, 1000);
+    setTimeout(() => {
+        y.id = "scrollgone";
+    }, 1000);
+    setTimeout(() => {
+        x.onclick = scrollTerug;
+        y.addEventListener("click", scrollUit);
+        x.addEventListener("click", scrollTerug);
+        progress.style.opacity = "1";
+        progress1.style.opacity = "1";
+        secties.style.opacity = "1";
+    }, 3600);
+    arrow.style.opacity = "0"
+    open.style.opacity = "0"
+}
+
+function scrollTerug() {
+    y.removeEventListener("click", scrollUit);
+    x.removeEventListener("click", scrollTerug);
+    z.style.transition = "0s";
+    z.style.width = "90%";
+    setTimeout(() => {
+        z.style.transition = "3.4s ease";
+        z.style.width = "0%";
+        paper.play();
+        x.id = "scrollzonder";
+        z.id = "content";
+        y.id = "scrollmet";
+        x.removeAttribute("onclick")
+        y.removeAttribute("onclick")
+        progress.style.opacity = "0";
+        secties.style.opacity = "0";
+        progress1.style.opacity = "0";
+        setTimeout(() => {
+            x.onclick = scrollTerug;
+            y.addEventListener("click", scrollUit);
+            x.addEventListener("click", scrollTerug);
+        }, 3600);
+        setTimeout(() => {
+            y.style.opacity = "1";
+            arrow.style.opacity = "1";
+            open.style.opacity = "1";
+        }, 3200);
+    }, 10);
+    window.moveTo(0, 0);
+}
+
 function schreeuw() {
     believeit.play();
 }
 
 
-function scrollUit() {
-    var x = document.getElementsByClassName("scroll")[0];
-    var y = document.getElementsByClassName("scroll")[1];
-    var z = document.getElementsByClassName("content")[0];
-    var arrow = document.getElementsByClassName("arrow")[0];
-    var open = document.getElementsByClassName("open")[0];
-    var progress = document.getElementsByClassName("progress")[0];
-    var progress1 = document.getElementsByClassName("progress")[1];
-    x.removeAttribute("onclick")
-    y.style.transition = "1s ease";
-    progress.style.transition = "1s ease";
-    progress1.style.transition = "1s ease";
-    z.style.transition = "3.4s ease";
-    y.style.opacity = "0"
-    y.removeAttribute("onclick");
-    progress1.style.width = "10em";
-    setTimeout(() => {  x.style.left = "87%"; }, 1000);
-    setTimeout(() => {  z.style.width = "90%"; }, 1000);
-    setTimeout(() => {  paper.play(); }, 1000);
-    setTimeout(() => {  z.style.width = "95%"; }, 4000);
-    setTimeout(() => {  x.onclick = scrollTerug; }, 3500);
-    setTimeout(() => {  progress.style.opacity = "1"; }, 3500);
-    setTimeout(() => {  progress1.style.opacity = "1"; }, 3500);
-    x.style.transition = "3.25s ease";
-    arrow.style.transition = "1s ease";
-    arrow.style.opacity = "0"
-    open.style.transition = "1s ease";
-    open.style.opacity = "0"
-}
+const element = document.querySelector("#container");
 
-function scrollTerug() {
-    var x = document.getElementsByClassName("scroll")[0];
-    var y = document.getElementsByClassName("scroll")[1];
-    var z = document.getElementsByClassName("content")[0];
-    var arrow = document.getElementsByClassName("arrow")[0];
-    var open = document.getElementsByClassName("open")[0];
-    var progress = document.getElementsByClassName("progress")[0];
-    var progress1 = document.getElementsByClassName("progress")[1];
-    paper.play();
-    x.style.left = "0%";
-    z.style.width = "0%";
-    z.style.transition = "3.2s ease";
-    x.removeAttribute("onclick")
-    y.removeAttribute("onclick")
-    progress.style.opacity = "0";
-    progress1.style.opacity = "0";
-    setTimeout(() => {  y.onclick = scrollUit; }, 5200);
-    setTimeout(() => {  y.style.opacity = "1"; }, 3200);
-    setTimeout(() => {  arrow.style.opacity = "1"; }, 3200);
-    setTimeout(() => {  open.style.opacity = "1"; }, 3200);
-}
+element.addEventListener('wheel', (event) => {
+    event.preventDefault();
 
+    element.scrollBy({
+        left: event.deltaY < 0 ? -300 : 300,
 
-
+    });
+});

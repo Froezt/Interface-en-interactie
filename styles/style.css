@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+
+
 @font-face {
     font-family: 'ninja_narutoregular';
     src: url('../fonts/njnaruto-webfont.woff2') format('woff2'),
@@ -13,32 +15,35 @@
     font-style: normal;
 }
 
-.open {
+#open {
     font-family: ninja_narutoregular;
     color: white;
     font-size: 1.5em;
     position: absolute;
     left: 30%;
-    top: 77%;
+    top: 23%;
     z-index: -2;
+    transition: 1s ease;
 }
 
-.arrow {
+#arrow {
     position: absolute;
     left: 25%;
-    top: 55%;
+    top: 15%;
     z-index: -2;
+    transition: 1s ease;
 }
 
 .progress {
-    position: absolute;
+    position: fixed;
     top: 75%;
-    left: 20%;
+    left: 19%;
     opacity: 0;
-    height: 22px;
-    width: 888px;
+    min-height: 22px;
+    width: 881px;
     object-fit: cover;
     object-position: 0%;
+    transition: 1s ease;
 }
 
 
@@ -48,8 +53,8 @@ body {
     font-family: ninja_narutoregular;
     background-image: url("../images/Sky.png");
     margin: 0;
-    background-size: cover;
-    overflow-x: hidden;
+    background-size: auto;
+    color: rgb(82, 55, 28);
     overflow-y: hidden;
 }
 
@@ -64,43 +69,141 @@ h1 {
     font-size: 36px;
 }
 
-.scroll {
+#scrollmet {
     height: 45em;
     width: auto;
     top: 0%;
     position: absolute;
     left: 0%;
+    transition: 1s ease;
 }
 
-.scroll:hover {
+#scrollzonder {
+    height: 45em;
+    width: auto;
+    top: 0%;
+    position: absolute;
+    left: 0%;
+    transition: 3.25s ease;
+    z-index: -1;
+}
+
+#test {
+    left: 150%;
+    position: absolute;
+}
+
+#scrollleft {
+    height: 45em;
+    width: auto;
+    top: 0%;
+    position: fixed;
+    left: 87%;
+    transition: 3.25s ease;
+    padding-right: 200vh;
+    z-index: -0;
+}
+
+#scrollgone {
+    height: 45em;
+    width: auto;
+    top: 0%;
+    position: absolute;
+    left: 0%;
+    opacity: 0;
+    transition: 1s ease;
+}
+
+#scrollleft:hover {
     cursor: pointer;
 }
 
-.content {
-    height: 45em;
+#scrollmet:hover {
+    cursor: pointer;
+}
+
+#scrollzonder:hover {
+    cursor: pointer;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    padding: 10vw 15vw;
+    display: flex;
+    position: fixed;
+    overflow: hidden;
+    padding-bottom: 300vh;
+    scroll-behavior: smooth;
+    overflow-y: hidden; 
+    transition: 1s ease;
+}
+
+
+
+#inhoud {
+    padding-left: 10vw;
+    padding-top: 1vw;
+    width: 50vw;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+#inhoud h1 {
+    padding-bottom: 4vh;
+    font-size: 2em;
+    transition: 0.5s ease;
+}
+
+#inhoud h1:hover {
+    font-size: 2.5em;
+    color: darkred;
+    cursor: pointer;
+}
+
+#content {
+    height: 41em;
     width: 0%;
-    top: 0%;
+    top: 1%;
     position: absolute;
-    left: 3%;
+    left: 4%;
+    z-index: -2;
+    object-fit: cover;
+    object-position: 0%;
+    transition: 3.4s ease;
+}
+
+#contentopen {
+    height: 41em;
+    width: 600%;
+    top: 1%;
+    position: absolute;
+    left: 4%;
     z-index: -1;
     object-fit: cover;
     object-position: 0%;
+    transition: 3.4s ease;
 }
+
 
 .logo {
     position: absolute;
-    left: 50%;
-    top: 35%;
+    left: 43%;
+    top: 11%;
     height: 13em;
-    z-index: -2;
+    z-index: -3;
+}
+
+.hoofd {
+    position: absolute;
+    left: 500%;
+    top: 7%;
+    height: 20em;
+    padding: unset;
+    z-index: -1;
 }
 
 
-.timeline {
-    background-color: #f2f2f2;
-    padding: 20px;
-    overflow-x: auto;
-}
 
 /* Styling for timeline events */
 .event {
@@ -144,5 +247,6 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
 
 /* Add additional styles and customization as needed */
