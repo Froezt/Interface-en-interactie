@@ -2,21 +2,23 @@
 <html>
 
 <head>
-    <title>Berserk Timeline Interactive</title>
+    <title>Naruto Interactive timeline</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 
 <body>
     <div id="container">
         <img id="scrollzonder" usemap="#workmap" src="images/scrollzonder.png" alt="Scroll without seal">
-        <img id="scrollmet"  src="images/scroll.png" alt="Scroll with seal">
-        <img id="content" onclick="" src="images/scrolluit.png" alt="Rolled out scroll">
-        <img class="logo" src="images/logo.png" alt="Naruto logo">
+        <img id="scrollmet" src="images/scrolll.png" alt="Scroll with seal">
+        <img id="content" onclick="" src="images/content.png" alt="Rolled out scroll">
+        <!--        https://naruto.fandom.com/wiki/Summoning_Technique-->
+        <img id="logo" src="images/logo.png" alt="Naruto logo">
+        <!--        https://en.m.wikipedia.org/wiki/File:Naruto_logo.svg-->
         <img id="arrow" src="images/arrow.png" alt="Arrow">
         <img class="progress" usemap="#workmap" onclick="" src="images/progress1.png" alt="Scrollbar">
         <img class="progress" usemap="#workmap" onclick="" src="images/progress2.png" alt="Scrollbar filled">
         <map name="workmap">
-            <area shape="rect" coords="0,0,368,976" alt="Computer" onclick="scrollTerug()" href="#scrollgone">
+            <area shape="rect" id="map" coords="0,0,368,976" alt="Computer" href="#scrollgone">
             <area shape="rect" coords="200,0,170,32" alt="Phone" onclick="theBeginning()" href="#test">
             <area shape="rect" coords="370,0,340,32" alt="Coffee" onclick="growingUp()">
             <area shape="rect" coords="540,0,510,32" alt="Coffee" onclick="gettingBetter()">
@@ -24,15 +26,42 @@
             <area shape="rect" coords="888,0,850,32" alt="Coffee" onclick="theEnd()">
         </map>
         <p id="open">Undo the seal!</p>
-        <section id="inhoud">
-            <h1 onclick="theBeginning()">1. The beginning</h1>
-            <h1 onclick="growingUp()">2. Growing up</h1>
-            <h1 onclick="gettingBetter()">3. Getting better</h1>
-            <h1 onclick="peak()">4. Peak</h1>
-            <h1 onclick="theEnd()">5. The end</h1>
+        <article id="inhoud">
+            <a href="#thebeginning"><h1>1. The beginning</h1></a>
+            <h1 href="">2. Growing up</h1>
+            <h1 href="""gettingBetter()">3. Getting better</h1>
+            <h1 href="""peak()">4. Peak</h1>
+            <h1 href="""theEnd()">5. The end</h1>
             <img class="hoofd" src="images/hoofd.png" alt="Naruto logo">
+        </article>
+        <section id="theBeginning">
+            <article>
+                <h1>The Beginning</h1>
+                <p class="about">Naruto Uzumaki was born without any parents, both of them died while trying to save Naruto after an attack by the 9 Tailed Fox on the Village in the leaves. They were barely able to save him and had to seal the beast inside of their child to save the village. Because of this, Naruto grew up on his own, supervised by the third hokage, the leader of the village hidden in the leaves.</p>
+                <img id="baby" onclick="" src="images/baby.png" alt="Scrollbar filled">
+            </article>
+            <article>
+                <p id="description">The 9 tails seal on Naruto's stomach.</p>
+                <img id="seal" onclick="" src="images/seal.png" alt="Scrollbar filled">
+            </article>
+            <article>
+                <img id="tails" onclick="" src="images/9tails.png" alt="Scrollbar filled">
+                <p id="description">the 9 tails</p>
+            </article>
         </section>
-        <section id="animatie">
+        <section id="growingUp">
+            <article>
+                <h1>Growing up</h1>
+                <p class="about">While growing up Naruto didn't have many friends. The beast that destroyed the village years ago was sealed inside him, which made a lot of people resent him. Parents pulled away their children from Naruto and told them not to play with him. While in the academy, Naruto spend most his time playing pranks on everyone in the village, which made them dislike him even more. Even though Naruto didn't have any real friends yet, he did hang around with Choji and Shikamaru, who were also troublemakers in class. This was a very sad time for Naruto, he didn't have any friends or other people to connect with. The loneliness made him pull pranks so he would at least get some attention. And when he got the attention he made sure to tell everyone to pay attention to him, as he was going to be the next hokage, believe it!</p>
+            </article>
+            <article>
+                <p id="description">Choji and Shikamaru</p>
+                <img id="shika" onclick="" src="images/shika.jpg" alt="Scrollbar filled">
+            </article>
+            <article>
+                <img id="tails" onclick="" src="images/prank.png" alt="Scrollbar filled">
+                <p id="description">Naruto pulling a prank</p>
+            </article>
         </section>
 
     </div>

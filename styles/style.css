@@ -36,7 +36,7 @@
 
 .progress {
     position: fixed;
-    top: 75%;
+    top: 78%;
     left: 19%;
     opacity: 0;
     min-height: 22px;
@@ -145,8 +145,10 @@ h1 {
     padding-left: 10vw;
     padding-top: 1vw;
     width: 50vw;
+    height: 23em;
     opacity: 0;
     transition: 0.5s ease;
+    display: none;
 }
 
 #inhoud h1 {
@@ -161,10 +163,77 @@ h1 {
     cursor: pointer;
 }
 
+#theBeginning {
+    padding-left: 10vw;
+    position: absolute;
+    width: 130vw;
+    height: 23em;
+    left: 90%;
+    opacity: 0;
+    transition: 0.5s ease;
+    display: none;
+    z-index: -1;
+    padding-left: 4em;
+    border-left: 2px solid #a74f46;
+    gap: 5em;
+    align-content: center;
+}
+
+#growingUp {
+    padding-left: 10vw;
+    position: absolute;
+    width: 130vw;
+    height: 23em;
+    left: 220%;
+    opacity: 0;
+    transition: 0.5s ease;
+    display: none;
+    z-index: -1;
+    padding-left: 4em;
+    border-left: 2px solid #a74f46;
+    gap: 5em;
+    align-content: center;
+}
+
+#growingUp h1 {
+    padding-bottom: 1em;
+}
+
+#shika {
+    width: 30em;
+}
+
+#seal {
+    width: 25em;
+    height: auto;
+    padding-left: 6em;
+}
+
+#tails {
+    width: 30em;
+    height: auto;
+}
+#description {
+    font-size: 1.2em;
+    text-align: center;
+    width: 25em;
+}
+
+.about {
+    width: 40vw;
+    font-size: 1em;
+}
+
+
+a {
+    text-decoration: none;
+    color: none;
+}
+
 #content {
-    height: 41em;
+    height: 44em;
     width: 0%;
-    top: 1%;
+    top: 0%;
     position: absolute;
     left: 4%;
     z-index: -2;
@@ -185,8 +254,12 @@ h1 {
     transition: 3.4s ease;
 }
 
+#baby {
+    width: 25em;
+}
 
-.logo {
+
+#logo {
     position: absolute;
     left: 43%;
     top: 11%;
@@ -196,7 +269,7 @@ h1 {
 
 .hoofd {
     position: absolute;
-    left: 500%;
+    left: 55%;
     top: 7%;
     height: 20em;
     padding: unset;

@@ -1,29 +1,35 @@
 var x = document.getElementById("scrollzonder");
+var map = document.getElementById("map");
 var y = document.getElementById("scrollmet");
 var z = document.getElementById("content");
 var arrow = document.getElementById("arrow");
 var open = document.getElementById("open");
 var progress = document.getElementsByClassName("progress")[0];
 var progress1 = document.getElementsByClassName("progress")[1];
-var logo = document.getElementsByClassName("logo")
+var logo = document.getElementById("logo");
 var paper = new Audio('sounds/paper.wav');
 var believeit = new Audio('sounds/believeit.mp3');
-var secties = document.querySelector("#container section");
-var container = document.getElementById("container")
+var thebeginning = document.getElementById("theBeginning");
+var growingup = document.getElementById("growingUp");
+var container = document.getElementById("container");
+var inhoud = document.getElementById("inhoud");
+var seal = document.getElementById("seal");
 
 console.log("noice");
 
-
+map.addEventListener("click", scrollTerug)
 y.addEventListener("click", scrollUit);
 x.addEventListener("click", scrollTerug);
 
 function scrollUit() {
+    inhoud.style.display = "block";
+    thebeginning.style.display = "flex";
+    growingup.style.display = "flex";
     y.removeEventListener("click", scrollUit);
     x.removeEventListener("click", scrollTerug);
     progress.style.transition = "1s ease";
     progress1.style.transition = "1s ease";
     y.style.opacity = "0"
-    y.removeAttribute("onclick");
     progress1.style.width = "2em";
     setTimeout(() => {
         z.style.width = "95%";
@@ -46,13 +52,18 @@ function scrollUit() {
         x.addEventListener("click", scrollTerug);
         progress.style.opacity = "1";
         progress1.style.opacity = "1";
-        secties.style.opacity = "1";
+        inhoud.style.opacity = "1";
+        thebeginning.style.opacity = "1";
+        growingup.style.opacity = "1";
     }, 3600);
     arrow.style.opacity = "0"
     open.style.opacity = "0"
 }
 
 function scrollTerug() {
+    inhoud.style.display = "none";
+    thebeginning.style.display = "none";
+    growingup.style.display = "none";
     y.removeEventListener("click", scrollUit);
     x.removeEventListener("click", scrollTerug);
     z.style.transition = "0s";
@@ -67,7 +78,8 @@ function scrollTerug() {
         x.removeAttribute("onclick")
         y.removeAttribute("onclick")
         progress.style.opacity = "0";
-        secties.style.opacity = "0";
+        inhoud.style.opacity = "0";
+        theBeginning.style.opacity = "0";
         progress1.style.opacity = "0";
         setTimeout(() => {
             x.onclick = scrollTerug;
@@ -80,8 +92,9 @@ function scrollTerug() {
             open.style.opacity = "1";
         }, 3200);
     }, 10);
-    window.moveTo(0, 0);
 }
+
+logo.addEventListener("click", schreeuw);
 
 function schreeuw() {
     believeit.play();
@@ -98,3 +111,5 @@ element.addEventListener('wheel', (event) => {
 
     });
 });
+
+
