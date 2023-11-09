@@ -164,7 +164,7 @@ h1 {
 }
 
 #theBeginning {
-    padding-left: 10vw;
+    padding-left: 20vw;
     position: absolute;
     width: 130vw;
     height: 23em;
@@ -195,7 +195,27 @@ h1 {
     align-content: center;
 }
 
+
+#gettingBetter {
+    padding-left: 20vw;
+    position: absolute;
+    width: 140vw;
+    height: 23em;
+    left: 350%;
+    opacity: 0;
+    transition: 0.5s ease;
+    display: none;
+    z-index: -1;
+    padding-left: 4em;
+    border-left: 2px solid #a74f46;
+    gap: 5em;
+    align-content: center;
+}
 #growingUp h1 {
+    padding-bottom: 1em;
+}
+
+#gettingBetter h1 {
     padding-bottom: 1em;
 }
 
@@ -213,10 +233,68 @@ h1 {
     width: 30em;
     height: auto;
 }
+
+#clone1 {
+    width: 19em;
+    left: 35%;
+    height: auto;
+    position: absolute;
+    opacity: 0;
+}
+
+#smoke1 {
+    width: 20em;
+    height: 25em;
+    left: 35%;
+    position: absolute;
+    opacity: 0;
+    object-fit: fill;
+}
+
+#clone2 {
+    width: 20em;
+    height: auto;
+    position: absolute;
+    left: 40%;
+    transition: 0.3s ease;
+}
+
+#clone2:hover {
+    width: 20.3em;
+    cursor: pointer;
+}
+
+#clone3 {
+    width: 19em;
+    height: auto;
+    position: absolute;
+    left: 45%;
+    opacity: 0;
+}
+
+#smoke2{
+    width: 20em;
+    height: 25em;
+    position: absolute;
+    left: 45%;
+    opacity: 0;
+    object-fit: fill;
+}
+
+
+
 #description {
     font-size: 1.2em;
     text-align: center;
     width: 25em;
+}
+
+#tip {
+    font-size: 1.2em;
+    text-align: center;
+    width: 30em;
+    transition: 0.5s ease;
+    transform: rotate(-10deg);
 }
 
 .about {
