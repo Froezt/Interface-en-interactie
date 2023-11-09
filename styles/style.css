@@ -15,40 +15,7 @@
     font-style: normal;
 }
 
-#open {
-    font-family: ninja_narutoregular;
-    color: white;
-    font-size: 1.5em;
-    position: absolute;
-    left: 30%;
-    top: 23%;
-    z-index: -2;
-    transition: 1s ease;
-}
 
-#arrow {
-    position: absolute;
-    left: 25%;
-    top: 15%;
-    z-index: -2;
-    transition: 1s ease;
-}
-
-.progress {
-    position: fixed;
-    top: 78%;
-    left: 19%;
-    opacity: 0;
-    min-height: 22px;
-    width: 881px;
-    object-fit: cover;
-    object-position: 0%;
-    transition: 1s ease;
-}
-
-
-
-/* Basic page styling */
 body {
     font-family: ninja_narutoregular;
     background-image: url("../images/Sky.png");
@@ -68,6 +35,26 @@ header {
 h1 {
     font-size: 36px;
 }
+/*styling zero state*/
+#open {
+    font-family: ninja_narutoregular;
+    color: white;
+    font-size: 1.5em;
+    position: absolute;
+    left: 30%;
+    top: 23%;
+    z-index: -2;
+    transition: 1s ease;
+}
+
+#arrow {
+    position: absolute;
+    left: 25%;
+    top: 15%;
+    z-index: -2;
+    transition: 1s ease;
+}
+
 
 #scrollmet {
     height: 45em;
@@ -88,10 +75,6 @@ h1 {
     z-index: -1;
 }
 
-#test {
-    left: 150%;
-    position: absolute;
-}
 
 #scrollleft {
     height: 45em;
@@ -126,6 +109,16 @@ h1 {
     cursor: pointer;
 }
 
+#logo {
+    position: absolute;
+    left: 43%;
+    top: 11%;
+    height: 13em;
+    z-index: -3;
+}
+
+/*deze conainer zorgt ervoor dat horizontaal scrollen mogelijk is*/
+
 #container {
     width: 100vw;
     height: 100vh;
@@ -139,7 +132,69 @@ h1 {
     transition: 1s ease;
 }
 
+/*anchors om naar bepaalde punten in de pagina te scrollen*/
 
+#anchor1 {
+    position: absolute;
+    left: 190%;
+    top: 0%;
+    width: 10px;
+}
+
+#anchor2 {
+    position: absolute;
+    left: 320%;
+    top: 0%;
+    width: 10px;
+}
+
+#anchor3 {
+    position: absolute;
+    left: 450%;
+    top: 0%;
+    width: 10px;
+}
+
+#anchor4 {
+    position: absolute;
+    left: 600%;
+    top: 0%;
+    width: 10px;
+}
+
+#anchor5 {
+    position: absolute;
+    left: 735%;
+    top: 0%;
+    width: 10px;
+}
+
+/*door object-fit: cover te gebruiken kan ik de breedte van de afbeelding veranderen zonder hem samen te drukken*/
+#content {
+    height: 44em;
+    width: 0%;
+    top: 0%;
+    position: absolute;
+    left: 4%;
+    z-index: -2;
+    object-fit: cover;
+    object-position: 0%;
+    transition: 3.4s ease;
+}
+
+
+/*styling van de content*/
+.progress {
+    position: fixed;
+    top: 78%;
+    left: 19%;
+    opacity: 0;
+    min-height: 22px;
+    width: 881px;
+    object-fit: cover;
+    object-position: 0%;
+    transition: 1s ease;
+}
 
 #inhoud {
     padding-left: 10vw;
@@ -211,13 +266,58 @@ h1 {
     gap: 5em;
     align-content: center;
 }
+
+#peak {
+    padding-left: 20vw;
+    position: absolute;
+    width: 140vw;
+    height: 23em;
+    left: 500%;
+    opacity: 0;
+    transition: 0.5s ease;
+    display: none;
+    z-index: -1;
+    padding-left: 4em;
+    border-left: 2px solid #a74f46;
+    gap: 5em;
+    align-content: center;
+}
+
+#theEnd {
+    padding-left: 20vw;
+    position: absolute;
+    width: 140vw;
+    height: 23em;
+    left: 635%;
+    opacity: 0;
+    transition: 0.5s ease;
+    display: none;
+    z-index: -1;
+    padding-left: 4em;
+    border-left: 2px solid #a74f46;
+    gap: 5em;
+    align-content: center;
+}
+
+
 #growingUp h1 {
+    padding-bottom: 1em;
+}
+
+#peak h1 {
+    padding-bottom: 1em;
+}
+
+#theEnd h1 {
     padding-bottom: 1em;
 }
 
 #gettingBetter h1 {
     padding-bottom: 1em;
+    width: 10em;
 }
+
+/*styling van afbeeldingen*/
 
 #shika {
     width: 30em;
@@ -229,6 +329,11 @@ h1 {
     padding-left: 6em;
 }
 
+#nvss {
+    width: 40em;
+    height: auto;
+}
+
 #tails {
     width: 30em;
     height: auto;
@@ -236,7 +341,7 @@ h1 {
 
 #clone1 {
     width: 19em;
-    left: 35%;
+    left: 45%;
     height: auto;
     position: absolute;
     opacity: 0;
@@ -245,7 +350,7 @@ h1 {
 #smoke1 {
     width: 20em;
     height: 25em;
-    left: 35%;
+    left: 45%;
     position: absolute;
     opacity: 0;
     object-fit: fill;
@@ -255,7 +360,7 @@ h1 {
     width: 20em;
     height: auto;
     position: absolute;
-    left: 40%;
+    left: 50%;
     transition: 0.3s ease;
 }
 
@@ -268,7 +373,7 @@ h1 {
     width: 19em;
     height: auto;
     position: absolute;
-    left: 45%;
+    left: 55%;
     opacity: 0;
 }
 
@@ -276,14 +381,64 @@ h1 {
     width: 20em;
     height: 25em;
     position: absolute;
-    left: 45%;
+    left: 55%;
     opacity: 0;
     object-fit: fill;
 }
 
+#iruka {
+    width: 8.5em;
+}
+#pain {
+    width: 8.5em;
+}
+
+#tailsnaruto {
+    width: 17em;
+}
+
+#painleaf {
+    width: 35em;
+}
+
+#sagemode {
+    width: 13em;
+}
+
+#team7 {
+    width: 27em;
+}
+
+#baby {
+    width: 25em;
+}
+
+#hoofd {
+    position: absolute;
+    left: 55%;
+    top: 7%;
+    height: 20em;
+    padding: unset;
+    z-index: -1;
+}
+
+/*styling van de tekst in de content*/
+
+#gettingBetter article:first-child {
+    width: 11em;
+}
+
+#naam {
+    font-size: 1.2em;
+    width: 30em;
+    transition: 0.5s ease;
+    transform: rotate(-10deg);
+}
 
 
-#description {
+
+
+.description {
     font-size: 1.2em;
     text-align: center;
     width: 25em;
@@ -292,9 +447,16 @@ h1 {
 #tip {
     font-size: 1.2em;
     text-align: center;
-    width: 30em;
+    width: 25em;
     transition: 0.5s ease;
     transform: rotate(-10deg);
+}
+
+#paindescription {
+    font-size: 1.2em;
+    text-align: center;
+    width: 10em;
+    transition: 0.5s ease;
 }
 
 .about {
@@ -305,99 +467,9 @@ h1 {
 
 a {
     text-decoration: none;
-    color: none;
-}
-
-#content {
-    height: 44em;
-    width: 0%;
-    top: 0%;
-    position: absolute;
-    left: 4%;
-    z-index: -2;
-    object-fit: cover;
-    object-position: 0%;
-    transition: 3.4s ease;
-}
-
-#contentopen {
-    height: 41em;
-    width: 600%;
-    top: 1%;
-    position: absolute;
-    left: 4%;
-    z-index: -1;
-    object-fit: cover;
-    object-position: 0%;
-    transition: 3.4s ease;
-}
-
-#baby {
-    width: 25em;
-}
-
-
-#logo {
-    position: absolute;
-    left: 43%;
-    top: 11%;
-    height: 13em;
-    z-index: -3;
-}
-
-.hoofd {
-    position: absolute;
-    left: 55%;
-    top: 7%;
-    height: 20em;
-    padding: unset;
-    z-index: -1;
+    color: rgb(82, 55, 28);
 }
 
 
 
-/* Styling for timeline events */
-.event {
-    display: inline-block;
-    width: 200px;
-    height: 200px;
-    background-color: #ccc;
-    margin: 10px;
-    cursor: pointer;
-}
 
-.event:hover {
-    background-color: #ddd;
-}
-
-.event-details {
-    background-color: #fff;
-    padding: 20px;
-}
-
-.character-biographies {
-    background-color: #fff;
-    padding: 20px;
-}
-
-.art-gallery {
-    background-color: #fff;
-    padding: 20px;
-}
-
-/* Styling for gallery images */
-.gallery-image {
-    display: inline-block;
-    margin: 10px;
-    cursor: pointer;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-
-/* Add additional styles and customization as needed */
